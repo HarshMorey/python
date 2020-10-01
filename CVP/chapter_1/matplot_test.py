@@ -10,17 +10,15 @@ def plotLine():
 
 	plot(x,y,"r*")
 	plot(x[:2],y[:2])
-
+	
 	title('Plotting: "empire.jpg"')
 	axis("off")
 	show()
-
+	
 def contourImage():
 	im=array(Image.open("empire.jpg").convert("L"))
-
 	figure()
 	gray()
-
 	contour(im,origin="image")
 	axis("equal")
 	axis("off")
@@ -28,7 +26,6 @@ def contourImage():
 
 def histImage():
 	im=array(Image.open("empire.jpg").convert("L"))
-
 	figure()
 	hist(im.flatten(),128)
 	show()
